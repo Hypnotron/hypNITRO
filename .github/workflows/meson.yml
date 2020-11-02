@@ -1,0 +1,68 @@
+name: Build and Package
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  ubuntu:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Build 
+        working-directory: ${{runner.workspace}}
+        run: |
+          sudo apt-get install libsdl2-2.0-0 libsdl2-dev
+          sudo -H pip3 install --upgrade pip setuptools 
+          sudo -H pip3 install meson ninja 
+          export SDK_VERSION=$(curl https://vulkan.lunarg.com/sdk/latest/linux.txt)
+          wget -qO sdk.tar.gz https://sdk.lunarg.com/sdk/download/${SDK_VERSION}/linux/vulkan_sdk.tar.gz
+          tar -xf sdk.tar.gz
+          source ${SDK_VERSION}/setup-env.sh
+          cd $GITHUB_WORKSPACE
+          meson setup build --prefix="/"
+          meson compile -C build
+          cd build
+          meson test
+          DESTDIR=${{runner.workspace}}/install meson install
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: hypnitro-linux
+          path: ${{runner.workspace}}/install/bin/
+  macos:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Build 
+        working-directory: ${{runner.workspace}}
+        run: |
+          brew install sdl2
+          sudo -H pip3 install --upgrade pip setuptools 
+          sudo -H pip3 install meson ninja 
+          export SDK_VERSION=$(curl https://vulkan.lunarg.com/sdk/latest/mac.txt)
+          wget -qO sdk.dmg https://sdk.lunarg.com/sdk/download/${SDK_VERSION}/mac/vulkan_sdk.dmg
+          hdiutil attach sdk.dmg -mountpoint ${{runner.workspace}}/sdk
+          cd sdk
+          sudo ./install_vulkan.py
+          cd $GITHUB_WORKSPACE
+          hdiutil detach ${{runner.workspace}}/sdk
+          meson setup build --prefix="/"
+          meson compile -C build
+          cd build
+          meson test
+          DESTDIR=${{runner.workspace}}/install meson install
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: hypnitro-macos
+          path: ${{runner.workspace}}/install/bin/
