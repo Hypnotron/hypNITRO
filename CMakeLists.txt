@@ -4,4 +4,5 @@ project(
         VERSION 0.0.0
         LANGUAGES CXX
 )
+include(CTest)
 add_subdirectory(src)

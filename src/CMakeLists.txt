@@ -38,15 +38,30 @@ add_executable(
         hypnitro-cli
         interface/cli.cpp
 )
+add_executable(
+        hypnitro-accuracy-test
+        interface/test.cpp
+)
 setup_properties(hypnitro-imgui)
 setup_properties(hypnitro-cli)
+setup_properties(hypnitro-accuracy-test)
 
 # dependencies:
 find_package(Vulkan REQUIRED)
 find_package(SDL2 REQUIRED)
 setup_libraries(hypnitro-imgui)
 setup_libraries(hypnitro-cli)
+setup_libraries(hypnitro-accuracy-test)
 
+# testing:
+enable_testing()
+configure_file(interface/test.nds test.nds COPYONLY)
+add_test(
+        NAME accuracy-test
+        COMMAND hypnitro-accuracy-test
+)
+
+# installation:
 install(
         TARGETS hypnitro-imgui hypnitro-cli
         RUNTIME

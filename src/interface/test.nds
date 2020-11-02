@@ -1,0 +1,2 @@
+There's supposed to be a test rom here, but I haven't written it yet :P
+test.cpp will always return 0 (pass) if this file exists.
