@@ -83,4 +83,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: hypnitro-windows
-          path: ${{runner.workspace}}/install/
+          path: ${{runner.workspace}}/install/msys64/bin/
