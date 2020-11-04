@@ -24,11 +24,11 @@ jobs:
           sudo -H pip3 install --upgrade pip setuptools 
           sudo -H pip3 install meson ninja 
           export SDK_VERSION=$(curl https://vulkan.lunarg.com/sdk/latest/linux.txt)
-          wget -qO sdk.tar.gz https://sdk.lunarg.com/sdk/download/${SDK_VERSION}/linux/vulkan_sdk.tar.gz
+          wget --no-cookies -O sdk.tar.gz https://sdk.lunarg.com/sdk/download/${SDK_VERSION}/linux/vulkan_sdk.tar.gz
           tar -xf sdk.tar.gz
           source ${SDK_VERSION}/setup-env.sh
           cd $GITHUB_WORKSPACE
-          meson setup build --prefix="/"
+          CXX=g++-10 meson setup build --prefix="/" --bindir=bin
           meson compile -C build
           cd build
           meson test
@@ -50,13 +50,13 @@ jobs:
           sudo -H pip3 install --upgrade pip setuptools 
           sudo -H pip3 install meson ninja 
           export SDK_VERSION=$(curl https://vulkan.lunarg.com/sdk/latest/mac.txt)
-          wget -qO sdk.dmg https://sdk.lunarg.com/sdk/download/${SDK_VERSION}/mac/vulkan_sdk.dmg
+          wget --no-cookies -O sdk.dmg https://sdk.lunarg.com/sdk/download/${SDK_VERSION}/mac/vulkan_sdk.dmg
           hdiutil attach sdk.dmg -mountpoint ${{runner.workspace}}/sdk
           cd sdk
           sudo ./install_vulkan.py
           cd $GITHUB_WORKSPACE
           hdiutil detach ${{runner.workspace}}/sdk
-          meson setup build --prefix="/"
+          meson setup build --prefix="/" --bindir=bin
           meson compile -C build
           cd build
           meson test
@@ -72,29 +72,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
       - name: Setup
-        shell: powershell
         run: |
+          C:\msys64\usr\bin\pacman -Syyu --noconfirm
+          C:\msys64\usr\bin\pacman -S --noconfirm mingw-w64-x86_64-SDL2 mingw-w64-x86_64-pkg-config mingw-w64-x86_64-toolchain mingw-w64-x86_64-gcc mingw-w64-x86_64-python mingw-w64-x86_64-meson
           choco install vulkan-sdk
           choco uninstall strawberryperl
       - name: Build
-        shell: C:\msys64\usr\bin\bash {0}
-        run: |
-          export PATH=${PATH}:/mingw64/bin
-          pacman -Syyu --noconfirm
-          pacman -S mingw-w64-x86_64-{SDL2,pkg-config,toolchain,gcc,python}
-          python3 -m ensurepip
-          python3 -m pip install --upgrade pip setuptools
-          python3 -m pip install meson ninja
-          export SDK_VERSION=$(curl https://vulkan.lunarg.com/sdk/latest/windows.txt)
-          export VULKAN_SDK=/c/VulkanSDK/${SDK_VERSION}
-          cd /d/a/hypNITRO/hypNITRO
-          meson setup build --prefix="/"
-          meson compile -C build
-          cd build
-          meson test
-          DESTDIR=/d/a/hypNITRO/install meson install
+        run: C:\msys64\usr\bin\bash -c 'export PATH=/c/msys64/mingw64/bin:${PATH} && echo $PATH && export SDK_VERSION=$(curl https://vulkan.lunarg.com/sdk/latest/windows.txt) && export VULKAN_SDK=/c/VulkanSDK/${SDK_VERSION} && cd /d/a/hypNITRO/hypNITRO && meson setup build --prefix="/" --bindir=bin && meson compile -C build && cd build && meson test && DESTDIR=/d/a/hypNITRO/install meson install' 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
           name: hypnitro-windows
-          path: ${{runner.workspace}}/install/bin/
+          path: ${{runner.workspace}}/install/msys64/bin/
