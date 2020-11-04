@@ -66,3 +66,35 @@ jobs:
         with:
           name: hypnitro-macos
           path: ${{runner.workspace}}/install/bin/
+  windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+      - name: Setup
+        shell: powershell
+        run: |
+          choco install vulkan-sdk
+          choco uninstall strawberryperl
+      - name: Build
+        shell: C:\msys64\usr\bin\bash {0}
+        run: |
+          export PATH=${PATH}:/mingw64/bin
+          pacman -Syyu --noconfirm
+          pacman -S mingw-w64-x86_64-{SDL2,pkg-config,toolchain,gcc,python}
+          python3 -m ensurepip
+          python3 -m pip install --upgrade pip setuptools
+          python3 -m pip install meson ninja
+          export SDK_VERSION=$(curl https://vulkan.lunarg.com/sdk/latest/windows.txt)
+          export VULKAN_SDK=/c/VulkanSDK/${SDK_VERSION}
+          cd /d/a/hypNITRO/hypNITRO
+          meson setup build --prefix="/"
+          meson compile -C build
+          cd build
+          meson test
+          DESTDIR=/d/a/hypNITRO/install meson install
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: hypnitro-windows
+          path: ${{runner.workspace}}/install/bin/

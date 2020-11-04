@@ -12,4 +12,3 @@ executable(
 
 accuracy_test = executable('hypnitro-accuracy-test', 'interface/test.cpp')
 test('Accuracy Test', accuracy_test)
-
