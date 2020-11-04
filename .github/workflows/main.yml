@@ -1,0 +1,73 @@
+# Based on GitHub's CMake template workflow
+
+name: cmake-build-and-test
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  ubuntu-setup:
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Install Dependencies
+      run: |
+        sudo apt install build-essential pkgconf libpkgconf-dev libpkgconf3 cmake cmake-data mesa-vulkan-drivers libsdl2-dev libvulkan-dev libvulkan1 gcc-10
+
+  macos-setup:
+    runs-on: macos-latest
+    steps:
+    - name: Install Dependencies
+      run: brew install vulkan-headers sdl2
+
+  windows-setup:
+    runs-on: windows-latest
+    steps:
+    - name: Install Dependencies
+      run: |
+        C:\msys64\usr\bin\pacman -Syyu --noconfirm
+        C:\msys64\usr\bin\pacman -S --noconfirm gcc mingw-w64-x86_64-vulkan-headers mingw-w64-x86_64-vulkan-loader mingw-w64-x86_64-SDL2
+
+  build:
+    runs-on: ${{matrix.os}}
+    needs: [ubuntu-setup] 
+    strategy:
+      matrix:
+        os: [ubuntu-20.04] 
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Create Build Directory
+      run: cmake -E make_directory ${{runner.workspace}}/build
+
+    - name: Generate Build Files
+      shell: bash
+      working-directory: ${{runner.workspace}}/build
+      run: |
+        wget -qO ${{runner.workspace}}/vulkan-sdk.tar.gz https://sdk.lunarg.com/sdk/download/latest/linux/vulkan-sdk-linux-x86_64.tar.gz
+        tar -C ${{runner.workspace}} -xzf ${{runner.workspace}}/vulkan-sdk.tar.gz
+        ls /usr/include/SDL2
+        PKG_CONFIG_PATH="${{runner.workspace}}/hypNITRO/misc" CXX=/usr/bin/g++-10 cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+      if: ${{runner.os == 'Linux'}}
+      
+    - name: Generate Build Files
+      shell: bash
+      working-directory: ${{runner.workspace}}/build
+      run: cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+      if: ${{runner.os == 'Windows' || runner.os == 'macOS'}}
+
+    - name: Build
+      working-directory: ${{runner.workspace}}/build
+      shell: bash
+      run: cmake --build . --config $BUILD_TYPE
+
+    - name: Test
+      working-directory: ${{runner.workspace}}/build
+      shell: bash
+      run: ctest -C $BUILD_TYPE
