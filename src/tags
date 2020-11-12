@@ -6,7 +6,12 @@
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
-!_TAG_PROGRAM_VERSION	5.9.0	/p5.9.20201101.0/
+!_TAG_PROGRAM_VERSION	5.9.0	/69af98ed/
+ABT	arm.hpp	/^            ABT,$/;"	e	enum:Cpu::Mode
+ARM7TDMI	arm.hpp	/^    ARM7TDMI,$/;"	e	enum:Core
+ARM946E_S	arm.hpp	/^    ARM946E_S,$/;"	e	enum:Core
+ARMv4T	arm.hpp	/^            ARMv4T,$/;"	e	enum:Cpu::InstructionSet
+ARMv5TE	arm.hpp	/^            ARMv5TE,$/;"	e	enum:Cpu::InstructionSet
 AcceptDragDropPayload	interface/imgui.cpp	/^const ImGuiPayload* ImGui::AcceptDragDropPayload(const char* type, ImGuiDragDropFlags flags)$/;"	f	class:ImGui	typeref:typename:const ImGuiPayload *
 ActivateItem	interface/imgui.cpp	/^void ImGui::ActivateItem(ImGuiID id)$/;"	f	class:ImGui	typeref:typename:void
 Active	interface/imgui_internal.h	/^    bool                    Active;                             \/\/ Set to true on Begin(), unl/;"	m	struct:ImGuiWindow	typeref:typename:bool
@@ -97,6 +102,7 @@ AutoFitFramesX	interface/imgui_internal.h	/^    ImS8                    AutoFitF
 AutoFitFramesY	interface/imgui_internal.h	/^    ImS8                    AutoFitFramesX, AutoFitFramesY;$/;"	m	struct:ImGuiWindow	typeref:typename:ImS8
 AutoFitOnlyGrows	interface/imgui_internal.h	/^    bool                    AutoFitOnlyGrows;$/;"	m	struct:ImGuiWindow	typeref:typename:bool
 AutoPosLastDirection	interface/imgui_internal.h	/^    ImGuiDir                AutoPosLastDirection;$/;"	m	struct:ImGuiWindow	typeref:typename:ImGuiDir
+BYTE	arm.hpp	/^    BYTE,$/;"	e	enum:Width
 Backbuffer	interface/imgui_impl_vulkan.h	/^    VkImage             Backbuffer;$/;"	m	struct:ImGui_ImplVulkanH_Frame	typeref:typename:VkImage
 BackbufferView	interface/imgui_impl_vulkan.h	/^    VkImageView         BackbufferView;$/;"	m	struct:ImGui_ImplVulkanH_Frame	typeref:typename:VkImageView
 BackendFlags	interface/imgui.h	/^    ImGuiBackendFlags  BackendFlags;            \/\/ = 0              \/\/ See ImGuiBackendFlags/;"	m	struct:ImGuiIO	typeref:typename:ImGuiBackendFlags
@@ -119,6 +125,8 @@ BackupGroupOffset	interface/imgui_internal.h	/^    ImVec1      BackupGroupOffset
 BackupIndent	interface/imgui_internal.h	/^    ImVec1      BackupIndent;$/;"	m	struct:ImGuiGroupData	typeref:typename:ImVec1
 BackupInt	interface/imgui_internal.h	/^    union           { int BackupInt[2]; float BackupFloat[2]; };$/;"	m	union:ImGuiStyleMod::__anonc0d10b52010a	typeref:typename:int[2]
 BackupValue	interface/imgui_internal.h	/^    ImVec4      BackupValue;$/;"	m	struct:ImGuiColorMod	typeref:typename:ImVec4
+Bank	bank.hpp	/^        Bank() {}$/;"	f	class:Bank
+Bank	bank.hpp	/^class Bank {$/;"	c
 BarRect	interface/imgui_internal.h	/^    ImRect              BarRect;$/;"	m	struct:ImGuiTabBar	typeref:typename:ImRect
 Begin	interface/imgui.cpp	/^bool ImGui::Begin(const char* name, bool* p_open, ImGuiWindowFlags flags)$/;"	f	class:ImGui	typeref:typename:bool
 Begin	interface/imgui.cpp	/^void ImGuiListClipper::Begin(int items_count, float items_height)$/;"	f	class:ImGuiListClipper	typeref:typename:void
@@ -174,11 +182,16 @@ BuildSortByKey	interface/imgui.cpp	/^void ImGuiStorage::BuildSortByKey()$/;"	f	c
 Bullet	interface/imgui_widgets.cpp	/^void ImGui::Bullet()$/;"	f	class:ImGui	typeref:typename:void
 BulletText	interface/imgui_widgets.cpp	/^void ImGui::BulletText(const char* fmt, ...)$/;"	f	class:ImGui	typeref:typename:void
 BulletTextV	interface/imgui_widgets.cpp	/^void ImGui::BulletTextV(const char* fmt, va_list args)$/;"	f	class:ImGui	typeref:typename:void
+BusType	arm.hpp	/^enum class BusType : u8 {$/;"	g	typeref:typename:u8
 Button	interface/imgui_widgets.cpp	/^bool ImGui::Button(const char* label, const ImVec2& size_arg)$/;"	f	class:ImGui	typeref:typename:bool
 ButtonBehavior	interface/imgui_widgets.cpp	/^bool ImGui::ButtonBehavior(const ImRect& bb, ImGuiID id, bool* out_hovered, bool* out_held, ImGu/;"	f	class:ImGui	typeref:typename:bool
 ButtonEx	interface/imgui_widgets.cpp	/^bool ImGui::ButtonEx(const char* label, const ImVec2& size_arg, ImGuiButtonFlags flags)$/;"	f	class:ImGui	typeref:typename:bool
 ButtonTextAlign	interface/imgui.h	/^    ImVec2      ButtonTextAlign;            \/\/ Alignment of button text when button is larger /;"	m	struct:ImGuiStyle	typeref:typename:ImVec2
+CARRY	arm.hpp	/^            CARRY,$/;"	e	enum:Cpu::Flag
+CODE	arm.hpp	/^    CODE,$/;"	e	enum:BusType
 COLUMNS_HIT_RECT_HALF_WIDTH	interface/imgui_widgets.cpp	/^static const float COLUMNS_HIT_RECT_HALF_WIDTH = 4.0f;$/;"	v	typeref:typename:const float	file:
+CP15	arm.hpp	/^class CP15 : public Coprocessor {$/;"	c
+CPSR	arm.hpp	/^            CPSR,$/;"	e	enum:Cpu::Register
 CalcCustomRectUV	interface/imgui_draw.cpp	/^void ImFontAtlas::CalcCustomRectUV(const ImFontAtlasCustomRect* rect, ImVec2* out_uv_min, ImVec2/;"	f	class:ImFontAtlas	typeref:typename:void
 CalcExtraSpace	interface/imgui_widgets.cpp	/^float ImGuiMenuColumns::CalcExtraSpace(float avail_w) const$/;"	f	class:ImGuiMenuColumns	typeref:typename:float
 CalcFontSize	interface/imgui_internal.h	/^    float       CalcFontSize() const    { ImGuiContext& g = *GImGui; float scale = g.FontBaseSiz/;"	f	struct:ImGuiWindow	typeref:typename:float
@@ -323,6 +336,8 @@ ContentSize	interface/imgui_internal.h	/^    ImVec2                  ContentSize
 ContentSizeExplicit	interface/imgui_internal.h	/^    ImVec2                  ContentSizeExplicit;                \/\/ Size of contents\/scrollabl/;"	m	struct:ImGuiWindow	typeref:typename:ImVec2
 ContentSizeVal	interface/imgui_internal.h	/^    ImVec2                      ContentSizeVal;$/;"	m	struct:ImGuiNextWindowData	typeref:typename:ImVec2
 ContentWidth	interface/imgui_internal.h	/^    float               ContentWidth;           \/\/ Width of label, stored during BeginTabItem(/;"	m	struct:ImGuiTabItem	typeref:typename:float
+Coprocessor	arm.hpp	/^class Coprocessor {};$/;"	c
+Core	arm.hpp	/^enum Core : u8 { $/;"	g	typeref:typename:u8
 CornerPosN	interface/imgui.cpp	/^    ImVec2  CornerPosN;$/;"	m	struct:ImGuiResizeGripDef	typeref:typename:ImVec2	file:
 CornerPosN1	interface/imgui.cpp	/^    ImVec2 CornerPosN1, CornerPosN2;$/;"	m	struct:ImGuiResizeBorderDef	typeref:typename:ImVec2	file:
 CornerPosN2	interface/imgui.cpp	/^    ImVec2 CornerPosN1, CornerPosN2;$/;"	m	struct:ImGuiResizeBorderDef	typeref:typename:ImVec2	file:
@@ -330,6 +345,7 @@ Count	interface/imgui.cpp	/^    ImU32           Count;$/;"	m	struct:ImGuiStyleVa
 Count	interface/imgui_impl_vulkan.cpp	/^    uint32_t            Count;$/;"	m	struct:ImGui_ImplVulkanH_WindowRenderBuffers	typeref:typename:uint32_t	file:
 Count	interface/imgui_internal.h	/^    int                 Count;$/;"	m	struct:ImGuiColumns	typeref:typename:int
 CountGrep	interface/imgui.h	/^    int                     CountGrep;$/;"	m	struct:ImGuiTextFilter	typeref:typename:int
+Cpu	arm.hpp	/^class Cpu {$/;"	c
 Create	interface/imgui_internal.h	/^    void            Create(int sz)              { Storage.resize((sz + 31) >> 5); memset(Storage/;"	f	struct:ImBitVector	typeref:typename:void
 CreateContext	interface/imgui.cpp	/^ImGuiContext* ImGui::CreateContext(ImFontAtlas* shared_font_atlas)$/;"	f	class:ImGui	typeref:typename:ImGuiContext *
 CreateNewWindow	interface/imgui.cpp	/^static ImGuiWindow* CreateNewWindow(const char* name, ImGuiWindowFlags flags)$/;"	f	typeref:typename:ImGuiWindow *	file:
@@ -361,7 +377,12 @@ CurveTessellationTol	interface/imgui.h	/^    float       CurveTessellationTol;  
 CurveTessellationTol	interface/imgui_internal.h	/^    float           CurveTessellationTol;       \/\/ Tessellation tolerance when using PathBezie/;"	m	struct:ImDrawListSharedData	typeref:typename:float
 CustomRect	interface/imgui.h	/^    typedef ImFontAtlasCustomRect    CustomRect;         \/\/ OBSOLETED in 1.72+$/;"	t	struct:ImFontAtlas	typeref:typename:ImFontAtlasCustomRect
 CustomRects	interface/imgui.h	/^    ImVector<ImFontAtlasCustomRect> CustomRects;    \/\/ Rectangles for packing custom texture d/;"	m	struct:ImFontAtlas	typeref:typename:ImVector<ImFontAtlasCustomRect>
+DATA	arm.hpp	/^    DATA,$/;"	e	enum:BusType
+DATA_ABORT	arm.hpp	/^            DATA_ABORT,$/;"	e	enum:Cpu::Interrupt
 DC	interface/imgui_internal.h	/^    ImGuiWindowTempData     DC;                                 \/\/ Temporary per-window data, /;"	m	struct:ImGuiWindow	typeref:typename:ImGuiWindowTempData
+DISABLE_FIQ	arm.hpp	/^            DISABLE_FIQ,$/;"	e	enum:Cpu::Flag
+DISABLE_IRQ	arm.hpp	/^            DISABLE_IRQ,$/;"	e	enum:Cpu::Flag
+DISABLE_LOGGING	interface/test.cpp	/^#define DISABLE_LOGGING$/;"	d	file:
 Data	interface/imgui.h	/^    ImVector<ImGuiStoragePair>      Data;$/;"	m	struct:ImGuiStorage	typeref:typename:ImVector<ImGuiStoragePair>
 Data	interface/imgui.h	/^    T*                  Data;$/;"	m	struct:ImVector	typeref:typename:T *
 Data	interface/imgui.h	/^    void*           Data;               \/\/ Data (copied and owned by dear imgui)$/;"	m	struct:ImGuiPayload	typeref:typename:void *
@@ -503,6 +524,8 @@ EventFlag	interface/imgui.h	/^    ImGuiInputTextFlags EventFlag;      \/\/ One I
 EventKey	interface/imgui.h	/^    ImGuiKey            EventKey;       \/\/ Key pressed (Up\/Down\/TAB)            \/\/ Read-on/;"	m	struct:ImGuiInputTextCallbackData	typeref:typename:ImGuiKey
 Expand	interface/imgui_internal.h	/^    void        Expand(const ImVec2& amount)        { Min.x -= amount.x; Min.y -= amount.y; Max./;"	f	struct:ImRect	typeref:typename:void
 Expand	interface/imgui_internal.h	/^    void        Expand(const float amount)          { Min.x -= amount;   Min.y -= amount;   Max./;"	f	struct:ImRect	typeref:typename:void
+FAST_INTERRUPT	arm.hpp	/^            FAST_INTERRUPT,$/;"	e	enum:Cpu::Interrupt
+FIQ	arm.hpp	/^            FIQ,$/;"	e	enum:Cpu::Mode
 FONT_ATLAS_DEFAULT_TEX_CURSOR_DATA	interface/imgui_draw.cpp	/^static const ImVec2 FONT_ATLAS_DEFAULT_TEX_CURSOR_DATA[ImGuiMouseCursor_COUNT][3] =$/;"	v	typeref:typename:const ImVec2[][3]	file:
 FONT_ATLAS_DEFAULT_TEX_DATA_H	interface/imgui_draw.cpp	/^const int FONT_ATLAS_DEFAULT_TEX_DATA_H = 27;$/;"	v	typeref:typename:const int
 FONT_ATLAS_DEFAULT_TEX_DATA_PIXELS	interface/imgui_draw.cpp	/^static const char FONT_ATLAS_DEFAULT_TEX_DATA_PIXELS[FONT_ATLAS_DEFAULT_TEX_DATA_W * FONT_ATLAS_/;"	v	typeref:typename:const char[]	file:
@@ -526,6 +549,7 @@ FindWindowByName	interface/imgui.cpp	/^ImGuiWindow* ImGui::FindWindowByName(cons
 FindWindowFocusIndex	interface/imgui.cpp	/^static int ImGui::FindWindowFocusIndex(ImGuiWindow* window) \/\/ FIXME-OPT O(N)$/;"	f	class:ImGui	typeref:typename:int	file:
 FindWindowNavFocusable	interface/imgui.cpp	/^static ImGuiWindow* FindWindowNavFocusable(int i_start, int i_stop, int dir) \/\/ FIXME-OPT O(N)$/;"	f	typeref:typename:ImGuiWindow *	file:
 FindWindowSettings	interface/imgui.cpp	/^ImGuiWindowSettings* ImGui::FindWindowSettings(ImGuiID id)$/;"	f	class:ImGui	typeref:typename:ImGuiWindowSettings *
+Flag	arm.hpp	/^        enum class Flag : u8 {$/;"	g	class:Cpu	typeref:typename:u8
 Flags	interface/imgui.h	/^    ImDrawListFlags         Flags;              \/\/ Flags, you may poke into these to adjust an/;"	m	struct:ImDrawList	typeref:typename:ImDrawListFlags
 Flags	interface/imgui.h	/^    ImFontAtlasFlags            Flags;              \/\/ Build flags (see ImFontAtlasFlags_)$/;"	m	struct:ImFontAtlas	typeref:typename:ImFontAtlasFlags
 Flags	interface/imgui.h	/^    ImGuiInputTextFlags Flags;          \/\/ What user passed to InputText()      \/\/ Read-only$/;"	m	struct:ImGuiInputTextCallbackData	typeref:typename:ImGuiInputTextFlags
@@ -778,6 +802,7 @@ GrabRounding	interface/imgui.h	/^    float       GrabRounding;               \/\
 GroupOffset	interface/imgui_internal.h	/^    ImVec1                  GroupOffset;$/;"	m	struct:ImGuiWindowTempData	typeref:typename:ImVec1
 GroupStack	interface/imgui_internal.h	/^    ImVector<ImGuiGroupData>GroupStack;$/;"	m	struct:ImGuiWindowTempData	typeref:typename:ImVector<ImGuiGroupData>
 GrowIndex	interface/imgui_draw.cpp	/^void ImFont::GrowIndex(int new_size)$/;"	f	class:ImFont	typeref:typename:void
+HALFWORD	arm.hpp	/^    HALFWORD,$/;"	e	enum:Width
 HSV	interface/imgui.h	/^    static ImColor HSV(float h, float s, float v, float a = 1.0f)   { float r, g, b; ImGui::Colo/;"	f	struct:ImColor	typeref:typename:ImColor
 HasCloseButton	interface/imgui_internal.h	/^    bool                    HasCloseButton;                     \/\/ Set when the window has a c/;"	m	struct:ImGuiWindow	typeref:typename:bool
 HasSelection	interface/imgui.h	/^    bool                HasSelection() const    { return SelectionStart != SelectionEnd; }$/;"	f	struct:ImGuiInputTextCallbackData	typeref:typename:bool
@@ -901,7 +926,9 @@ IM_UNICODE_CODEPOINT_INVALID	interface/imgui.h	/^#define IM_UNICODE_CODEPOINT_IN
 IM_UNICODE_CODEPOINT_MAX	interface/imgui.h	/^#define IM_UNICODE_CODEPOINT_MAX /;"	d
 IM_UNUSED	interface/imgui.h	/^#define IM_UNUSED(/;"	d
 INCLUDE_STB_TEXTEDIT_H	interface/imstb_textedit.h	/^#define INCLUDE_STB_TEXTEDIT_H$/;"	d
+INTERRUPT	arm.hpp	/^            INTERRUPT,$/;"	e	enum:Cpu::Interrupt
 IO	interface/imgui_internal.h	/^    ImGuiIO                 IO;$/;"	m	struct:ImGuiContext	typeref:typename:ImGuiIO
+IRQ	arm.hpp	/^            IRQ,$/;"	e	enum:Cpu::Mode
 IdxBuffer	interface/imgui.h	/^    ImVector<ImDrawIdx>     IdxBuffer;          \/\/ Index buffer. Each command consume ImDrawCm/;"	m	struct:ImDrawList	typeref:typename:ImVector<ImDrawIdx>
 IdxOffset	interface/imgui.h	/^    unsigned int    IdxOffset;          \/\/ 4    \/\/ Start offset in index buffer. Always equa/;"	m	struct:ImDrawCmd	typeref:typename:unsigned int
 ImAbs	interface/imgui_internal.h	/^static inline double ImAbs(double x)            { return fabs(x); }$/;"	f	typeref:typename:double
@@ -1919,6 +1946,8 @@ InputTextState	interface/imgui_internal.h	/^    ImGuiInputTextState     InputTex
 InputTextWithHint	interface/imgui_widgets.cpp	/^bool ImGui::InputTextWithHint(const char* label, const char* hint, char* buf, size_t buf_size, I/;"	f	class:ImGui	typeref:typename:bool
 InsertChars	interface/imgui_widgets.cpp	/^void ImGuiInputTextCallbackData::InsertChars(int pos, const char* new_text, const char* new_text/;"	f	class:ImGuiInputTextCallbackData	typeref:typename:void
 Instance	interface/imgui_impl_vulkan.h	/^    VkInstance          Instance;$/;"	m	struct:ImGui_ImplVulkan_InitInfo	typeref:typename:VkInstance
+InstructionSet	arm.hpp	/^        enum InstructionSet : u8 {$/;"	g	class:Cpu	typeref:typename:u8
+Interrupt	arm.hpp	/^        enum Interrupt : u8 {$/;"	g	class:Cpu	typeref:typename:u8
 InvisibleButton	interface/imgui_widgets.cpp	/^bool ImGui::InvisibleButton(const char* str_id, const ImVec2& size_arg, ImGuiButtonFlags flags)$/;"	f	class:ImGui	typeref:typename:bool
 IsActive	interface/imgui.h	/^    bool                IsActive() const { return !Filters.empty(); }$/;"	f	struct:ImGuiTextFilter	typeref:typename:bool
 IsActiveIdUsingKey	interface/imgui_internal.h	/^    inline bool             IsActiveIdUsingKey(ImGuiKey key)                            { ImGuiC/;"	f	namespace:ImGui	typeref:typename:bool
@@ -2007,6 +2036,7 @@ KeySuper	interface/imgui.h	/^    bool        KeySuper;                       \/\
 KeysDown	interface/imgui.h	/^    bool        KeysDown[512];                  \/\/ Keyboard keys that are pressed (ideally lef/;"	m	struct:ImGuiIO	typeref:typename:bool[512]
 KeysDownDuration	interface/imgui.h	/^    float       KeysDownDuration[512];          \/\/ Duration the keyboard key has been down (0./;"	m	struct:ImGuiIO	typeref:typename:float[512]
 KeysDownDurationPrev	interface/imgui.h	/^    float       KeysDownDurationPrev[512];      \/\/ Previous duration the key has been down$/;"	m	struct:ImGuiIO	typeref:typename:float[512]
+LR	arm.hpp	/^            LR,$/;"	e	enum:Cpu::Register
 LabelText	interface/imgui_widgets.cpp	/^void ImGui::LabelText(const char* label, const char* fmt, ...)$/;"	f	class:ImGui	typeref:typename:void
 LabelTextV	interface/imgui_widgets.cpp	/^void ImGui::LabelTextV(const char* label, const char* fmt, va_list args)$/;"	f	class:ImGui	typeref:typename:void
 LastActiveId	interface/imgui_internal.h	/^    ImGuiID                 LastActiveId;                       \/\/ Store the last non-zero Act/;"	m	struct:ImGuiContext	typeref:typename:ImGuiID
@@ -2060,6 +2090,7 @@ LogType	interface/imgui_internal.h	/^    ImGuiLogType            LogType;       
 LowerBound	interface/imgui.cpp	/^static ImGuiStorage::ImGuiStoragePair* LowerBound(ImVector<ImGuiStorage::ImGuiStoragePair>& data/;"	f	typeref:typename:ImGuiStorage::ImGuiStoragePair *	file:
 MAP_ANALOG	interface/imgui_impl_sdl.cpp	/^    #define MAP_ANALOG(/;"	d	file:
 MAP_BUTTON	interface/imgui_impl_sdl.cpp	/^    #define MAP_BUTTON(/;"	d	file:
+MODE	arm.hpp	/^            MODE,$/;"	e	enum:Cpu::Flag
 MSAASamples	interface/imgui_impl_vulkan.h	/^    VkSampleCountFlagBits        MSAASamples;   \/\/ >= VK_SAMPLE_COUNT_1_BIT$/;"	m	struct:ImGui_ImplVulkan_InitInfo	typeref:typename:VkSampleCountFlagBits
 MallocWrapper	interface/imgui.cpp	/^static void*   MallocWrapper(size_t size, void* user_data)    { IM_UNUSED(user_data); IM_UNUSED(/;"	f	typeref:typename:void *	file:
 MallocWrapper	interface/imgui.cpp	/^static void*   MallocWrapper(size_t size, void* user_data)    { IM_UNUSED(user_data); return mal/;"	f	typeref:typename:void *	file:
@@ -2093,6 +2124,7 @@ MetricsRenderWindows	interface/imgui.h	/^    int         MetricsRenderWindows;  
 MetricsTotalSurface	interface/imgui.h	/^    int                         MetricsTotalSurface;\/\/ 4     \/\/ out \/\/            \/\/ Tot/;"	m	struct:ImFont	typeref:typename:int
 Min	interface/imgui_internal.h	/^    ImVec2      Min;    \/\/ Upper-left$/;"	m	struct:ImRect	typeref:typename:ImVec2
 MinImageCount	interface/imgui_impl_vulkan.h	/^    uint32_t            MinImageCount;          \/\/ >= 2$/;"	m	struct:ImGui_ImplVulkan_InitInfo	typeref:typename:uint32_t
+Mode	arm.hpp	/^        enum class Mode : u8 {$/;"	g	class:Cpu	typeref:typename:u8
 MouseClicked	interface/imgui.h	/^    bool        MouseClicked[5];                \/\/ Mouse button went from !Down to Down$/;"	m	struct:ImGuiIO	typeref:typename:bool[5]
 MouseClickedPos	interface/imgui.h	/^    ImVec2      MouseClickedPos[5];             \/\/ Position at time of clicking$/;"	m	struct:ImGuiIO	typeref:typename:ImVec2[5]
 MouseClickedTime	interface/imgui.h	/^    double      MouseClickedTime[5];            \/\/ Time of last click (used to figure out doub/;"	m	struct:ImGuiIO	typeref:typename:double[5]
@@ -2121,6 +2153,7 @@ MovingWindow	interface/imgui_internal.h	/^    ImGuiWindow*            MovingWind
 NAV_MAP_KEY	interface/imgui.cpp	/^        #define NAV_MAP_KEY(/;"	d	file:
 NAV_WINDOWING_HIGHLIGHT_DELAY	interface/imgui.cpp	/^static const float NAV_WINDOWING_HIGHLIGHT_DELAY            = 0.20f;    \/\/ Time before the hig/;"	v	typeref:typename:const float	file:
 NAV_WINDOWING_LIST_APPEAR_DELAY	interface/imgui.cpp	/^static const float NAV_WINDOWING_LIST_APPEAR_DELAY          = 0.15f;    \/\/ Time before the win/;"	v	typeref:typename:const float	file:
+NEGATIVE	arm.hpp	/^            NEGATIVE$/;"	e	enum:Cpu::Flag
 NOMINMAX	interface/imgui.cpp	/^#define NOMINMAX$/;"	d	file:
 Name	interface/imgui.h	/^    char            Name[40];               \/\/ Name (strictly to ease debugging)$/;"	m	struct:ImFontConfig	typeref:typename:char[40]
 Name	interface/imgui_internal.h	/^    char*                   Name;                               \/\/ Window name, owned by the w/;"	m	struct:ImGuiWindow	typeref:typename:char *
@@ -2215,6 +2248,7 @@ NextSelectedTabId	interface/imgui_internal.h	/^    ImGuiID             NextSelec
 NextWidth	interface/imgui_internal.h	/^    float       Width, NextWidth;$/;"	m	struct:ImGuiMenuColumns	typeref:typename:float
 NextWidths	interface/imgui_internal.h	/^    float       Pos[3], NextWidths[3];$/;"	m	struct:ImGuiMenuColumns	typeref:typename:float[3]
 NextWindowData	interface/imgui_internal.h	/^    ImGuiNextWindowData     NextWindowData;                     \/\/ Storage for SetNextWindow**/;"	m	struct:ImGuiContext	typeref:typename:ImGuiNextWindowData
+OVERFLOW	arm.hpp	/^            OVERFLOW,$/;"	e	enum:Cpu::Flag
 OffMaxX	interface/imgui_internal.h	/^    float               OffMinX, OffMaxX;       \/\/ Offsets from HostWorkRect.Min.x$/;"	m	struct:ImGuiColumns	typeref:typename:float
 OffMinX	interface/imgui_internal.h	/^    float               OffMinX, OffMaxX;       \/\/ Offsets from HostWorkRect.Min.x$/;"	m	struct:ImGuiColumns	typeref:typename:float
 Offset	interface/imgui.cpp	/^    ImU32           Offset;$/;"	m	struct:ImGuiStyleVarInfo	typeref:typename:ImU32	file:
@@ -2239,6 +2273,8 @@ Overlaps	interface/imgui_internal.h	/^    bool        Overlaps(const ImRect& r) 
 OversampleH	interface/imgui.h	/^    int             OversampleH;            \/\/ 3        \/\/ Rasterize at higher quality for s/;"	m	struct:ImFontConfig	typeref:typename:int
 OversampleV	interface/imgui.h	/^    int             OversampleV;            \/\/ 1        \/\/ Rasterize at higher quality for s/;"	m	struct:ImFontConfig	typeref:typename:int
 Owner	interface/imgui_internal.h	/^    ImGuiID                     Owner;$/;"	m	struct:ImGuiContextHook	typeref:typename:ImGuiID
+PC	arm.hpp	/^            PC,$/;"	e	enum:Cpu::Register
+PREFETCH_ABORT	arm.hpp	/^            PREFETCH_ABORT,$/;"	e	enum:Cpu::Interrupt
 PackIdLines	interface/imgui.h	/^    int                         PackIdLines;        \/\/ Custom texture rectangle ID for baked a/;"	m	struct:ImFontAtlas	typeref:typename:int
 PackIdMouseCursors	interface/imgui.h	/^    int                         PackIdMouseCursors; \/\/ Custom texture rectangle ID for white p/;"	m	struct:ImFontAtlas	typeref:typename:int
 PackRange	interface/imgui_draw.cpp	/^    stbtt_pack_range    PackRange;          \/\/ Hold the list of codepoints to pack (essentiall/;"	m	struct:ImFontBuildSrcData	typeref:typename:stbtt_pack_range	file:
@@ -2340,6 +2376,7 @@ PushTextWrapPos	interface/imgui.cpp	/^void ImGui::PushTextWrapPos(float wrap_pos
 PushTextureID	interface/imgui_draw.cpp	/^void ImDrawList::PushTextureID(ImTextureID texture_id)$/;"	f	class:ImDrawList	typeref:typename:void
 Queue	interface/imgui_impl_vulkan.h	/^    VkQueue             Queue;$/;"	m	struct:ImGui_ImplVulkan_InitInfo	typeref:typename:VkQueue
 QueueFamily	interface/imgui_impl_vulkan.h	/^    uint32_t            QueueFamily;$/;"	m	struct:ImGui_ImplVulkan_InitInfo	typeref:typename:uint32_t
+RESET	arm.hpp	/^            RESET,$/;"	e	enum:Cpu::Interrupt
 RadioButton	interface/imgui_widgets.cpp	/^bool ImGui::RadioButton(const char* label, bool active)$/;"	f	class:ImGui	typeref:typename:bool
 RadioButton	interface/imgui_widgets.cpp	/^bool ImGui::RadioButton(const char* label, int* v, int v_button)$/;"	f	class:ImGui	typeref:typename:bool
 RasterizerFlags	interface/imgui.h	/^    unsigned int    RasterizerFlags;        \/\/ 0x00     \/\/ Settings for custom font rasteriz/;"	m	struct:ImFontConfig	typeref:typename:unsigned int
@@ -2351,6 +2388,7 @@ Rect	interface/imgui_internal.h	/^    ImRect      Rect() const            { retu
 RectRel	interface/imgui_internal.h	/^    ImRect          RectRel;            \/\/ Best candidate bounding box in window relative spac/;"	m	struct:ImGuiNavMoveResult	typeref:typename:ImRect
 Rects	interface/imgui_draw.cpp	/^    stbrp_rect*         Rects;              \/\/ Rectangle to pack. We first fill in their size /;"	m	struct:ImFontBuildSrcData	typeref:typename:stbrp_rect *	file:
 RefFrame	interface/imgui.h	/^    mutable int RefFrame;$/;"	m	struct:ImGuiOnceUponAFrame	typeref:typename:int
+Register	arm.hpp	/^        enum Register : u8 {$/;"	g	class:Cpu	typeref:typename:u8
 Remove	interface/imgui_internal.h	/^    void        Remove(ImGuiID key, ImPoolIdx idx)  { Buf[idx].~T(); *(int*)&Buf[idx] = FreeIdx;/;"	f	struct:ImPool	typeref:typename:void
 Remove	interface/imgui_internal.h	/^    void        Remove(ImGuiID key, const T* p)     { Remove(key, GetIndex(p)); }$/;"	f	struct:ImPool	typeref:typename:void
 Render	interface/imgui.cpp	/^void ImGui::Render()$/;"	f	class:ImGui	typeref:typename:void
@@ -2392,6 +2430,9 @@ RootWindowForTitleBarHighlight	interface/imgui_internal.h	/^    ImGuiWindow*    
 SDL_Event	interface/imgui_impl_sdl.h	/^typedef union SDL_Event SDL_Event;$/;"	t	typeref:union:SDL_Event
 SDL_HAS_CAPTURE_AND_GLOBAL_MOUSE	interface/imgui_impl_sdl.cpp	/^#define SDL_HAS_CAPTURE_AND_GLOBAL_MOUSE /;"	d	file:
 SDL_HAS_VULKAN	interface/imgui_impl_sdl.cpp	/^#define SDL_HAS_VULKAN /;"	d	file:
+SOFTWARE_INTERRUPT	arm.hpp	/^            SOFTWARE_INTERRUPT,$/;"	e	enum:Cpu::Interrupt
+SP	arm.hpp	/^            SP = 13,$/;"	e	enum:Cpu::Register
+SPSR	arm.hpp	/^            SPSR,$/;"	e	enum:Cpu::Register
 STBRP_ASSERT	interface/imgui_draw.cpp	/^#define STBRP_ASSERT(/;"	d	file:
 STBRP_ASSERT	interface/imstb_rectpack.h	/^#define STBRP_ASSERT /;"	d
 STBRP_DEF	interface/imstb_rectpack.h	/^#define STBRP_DEF /;"	d
@@ -2551,6 +2592,9 @@ STB_TEXTEDIT_memmove	interface/imstb_textedit.h	/^#define STB_TEXTEDIT_memmove /
 STB_TEXT_HAS_SELECTION	interface/imstb_textedit.h	/^#define STB_TEXT_HAS_SELECTION(/;"	d
 STB_TRUETYPE_IMPLEMENTATION	interface/imgui_draw.cpp	/^#define STB_TRUETYPE_IMPLEMENTATION$/;"	d	file:
 STB_TexteditState	interface/imstb_textedit.h	/^} STB_TexteditState;$/;"	t	typeref:struct:__anon0a8ecdc40308
+STICKY_OVERFLOW	arm.hpp	/^            STICKY_OVERFLOW = 27,$/;"	e	enum:Cpu::Flag
+SVC	arm.hpp	/^            SVC,$/;"	e	enum:Cpu::Mode
+SYS	arm.hpp	/^            SYS,$/;"	e	enum:Cpu::Mode
 SameLine	interface/imgui.cpp	/^void ImGui::SameLine(float offset_from_start_x, float spacing_w)$/;"	f	class:ImGui	typeref:typename:void
 SaveIniSettingsToDisk	interface/imgui.cpp	/^void ImGui::SaveIniSettingsToDisk(const char* ini_filename)$/;"	f	class:ImGui	typeref:typename:void
 SaveIniSettingsToMemory	interface/imgui.cpp	/^const char* ImGui::SaveIniSettingsToMemory(size_t* out_size)$/;"	f	class:ImGui	typeref:typename:const char *
@@ -2767,6 +2811,7 @@ StyleModifiers	interface/imgui_internal.h	/^    ImVector<ImGuiStyleMod> StyleMod
 Surface	interface/imgui_impl_vulkan.h	/^    VkSurfaceKHR        Surface;$/;"	m	struct:ImGui_ImplVulkanH_Window	typeref:typename:VkSurfaceKHR
 SurfaceFormat	interface/imgui_impl_vulkan.h	/^    VkSurfaceFormatKHR  SurfaceFormat;$/;"	m	struct:ImGui_ImplVulkanH_Window	typeref:typename:VkSurfaceFormatKHR
 Swapchain	interface/imgui_impl_vulkan.h	/^    VkSwapchainKHR      Swapchain;$/;"	m	struct:ImGui_ImplVulkanH_Window	typeref:typename:VkSwapchainKHR
+THUMB	arm.hpp	/^            THUMB = 5,$/;"	e	enum:Cpu::Flag
 TRT_BackgroundClipRect	interface/imgui.cpp	/^    enum { TRT_OuterRect, TRT_WorkRect, TRT_HostClipRect, TRT_InnerClipRect, TRT_BackgroundClipR/;"	e	enum:ImGui::ShowMetricsWindow::__anon849780f10203	file:
 TRT_ColumnsClipRect	interface/imgui.cpp	/^    enum { TRT_OuterRect, TRT_WorkRect, TRT_HostClipRect, TRT_InnerClipRect, TRT_BackgroundClipR/;"	e	enum:ImGui::ShowMetricsWindow::__anon849780f10203	file:
 TRT_ColumnsContentHeadersIdeal	interface/imgui.cpp	/^    enum { TRT_OuterRect, TRT_WorkRect, TRT_HostClipRect, TRT_InnerClipRect, TRT_BackgroundClipR/;"	e	enum:ImGui::ShowMetricsWindow::__anon849780f10203	file:
@@ -2880,6 +2925,9 @@ TypeHash	interface/imgui_internal.h	/^    ImGuiID     TypeHash;       \/\/ == Im
 TypeName	interface/imgui_internal.h	/^    const char* TypeName;       \/\/ Short description stored in .ini file. Disallowed character/;"	m	struct:ImGuiSettingsHandler	typeref:typename:const char *
 U0	interface/imgui.h	/^    float           U0, V0, U1, V1;     \/\/ Texture coordinates$/;"	m	struct:ImFontGlyph	typeref:typename:float
 U1	interface/imgui.h	/^    float           U0, V0, U1, V1;     \/\/ Texture coordinates$/;"	m	struct:ImFontGlyph	typeref:typename:float
+UND	arm.hpp	/^            UND,$/;"	e	enum:Cpu::Mode
+UNDEFINED_INSTRUCTION	arm.hpp	/^            UNDEFINED_INSTRUCTION,$/;"	e	enum:Cpu::Interrupt
+USR	arm.hpp	/^            USR,$/;"	e	enum:Cpu::Mode
 Unindent	interface/imgui.cpp	/^void ImGui::Unindent(float indent_w)$/;"	f	class:ImGui	typeref:typename:void
 UnpackAccumulativeOffsetsIntoRanges	interface/imgui_draw.cpp	/^static void UnpackAccumulativeOffsetsIntoRanges(int base_codepoint, const short* accumulative_of/;"	f	typeref:typename:void	file:
 UnpackBitVectorToFlatIndexList	interface/imgui_draw.cpp	/^static void UnpackBitVectorToFlatIndexList(const ImBitVector* in, ImVector<int>* out)$/;"	f	typeref:typename:void	file:
@@ -2931,6 +2979,7 @@ WIN32_LEAN_AND_MEAN	interface/imgui.cpp	/^#define WIN32_LEAN_AND_MEAN$/;"	d	file
 WINDOWS_MOUSE_WHEEL_SCROLL_LOCK_TIMER	interface/imgui.cpp	/^static const float WINDOWS_MOUSE_WHEEL_SCROLL_LOCK_TIMER    = 2.00f;    \/\/ Lock scrolled windo/;"	v	typeref:typename:const float	file:
 WINDOWS_RESIZE_FROM_EDGES_FEEDBACK_TIMER	interface/imgui.cpp	/^static const float WINDOWS_RESIZE_FROM_EDGES_FEEDBACK_TIMER = 0.04f;    \/\/ Reduce visual noise/;"	v	typeref:typename:const float	file:
 WINDOWS_RESIZE_FROM_EDGES_HALF_THICKNESS	interface/imgui.cpp	/^static const float WINDOWS_RESIZE_FROM_EDGES_HALF_THICKNESS = 4.0f;     \/\/ Extend outside and /;"	v	typeref:typename:const float	file:
+WORD	arm.hpp	/^    WORD,$/;"	e	enum:Width
 WRT_Content	interface/imgui.cpp	/^    enum { WRT_OuterRect, WRT_OuterRectClipped, WRT_InnerRect, WRT_InnerClipRect, WRT_WorkRect, /;"	e	enum:ImGui::ShowMetricsWindow::__anon849780f10103	file:
 WRT_ContentRegionRect	interface/imgui.cpp	/^    enum { WRT_OuterRect, WRT_OuterRectClipped, WRT_InnerRect, WRT_InnerClipRect, WRT_WorkRect, /;"	e	enum:ImGui::ShowMetricsWindow::__anon849780f10103	file:
 WRT_Count	interface/imgui.cpp	/^    enum { WRT_OuterRect, WRT_OuterRectClipped, WRT_InnerRect, WRT_InnerClipRect, WRT_WorkRect, /;"	e	enum:ImGui::ShowMetricsWindow::__anon849780f10103	file:
@@ -2955,6 +3004,7 @@ WasActive	interface/imgui_internal.h	/^    bool                    WasActive;$/;
 WheelingWindow	interface/imgui_internal.h	/^    ImGuiWindow*            WheelingWindow;                     \/\/ Track the window we started/;"	m	struct:ImGuiContext	typeref:typename:ImGuiWindow *
 WheelingWindowRefMousePos	interface/imgui_internal.h	/^    ImVec2                  WheelingWindowRefMousePos;$/;"	m	struct:ImGuiContext	typeref:typename:ImVec2
 WheelingWindowTimer	interface/imgui_internal.h	/^    float                   WheelingWindowTimer;$/;"	m	struct:ImGuiContext	typeref:typename:float
+Width	arm.hpp	/^enum class Width : u8 {$/;"	g	typeref:typename:u8
 Width	interface/imgui.h	/^    unsigned short  Width, Height;  \/\/ Input    \/\/ Desired rectangle dimension$/;"	m	struct:ImFontAtlasCustomRect	typeref:typename:unsigned short
 Width	interface/imgui_impl_vulkan.h	/^    int                 Width;$/;"	m	struct:ImGui_ImplVulkanH_Window	typeref:typename:int
 Width	interface/imgui_internal.h	/^    float                       Width;          \/\/ Set by SetNextItemWidth()$/;"	m	struct:ImGuiNextItemData	typeref:typename:float
@@ -2997,6 +3047,7 @@ X1	interface/imgui.h	/^    float           X0, Y0, X1, Y1;     \/\/ Glyph corner
 Y	interface/imgui.h	/^    unsigned short  X, Y;           \/\/ Output   \/\/ Packed position in Atlas$/;"	m	struct:ImFontAtlasCustomRect	typeref:typename:unsigned short
 Y0	interface/imgui.h	/^    float           X0, Y0, X1, Y1;     \/\/ Glyph corners$/;"	m	struct:ImFontGlyph	typeref:typename:float
 Y1	interface/imgui.h	/^    float           X0, Y0, X1, Y1;     \/\/ Glyph corners$/;"	m	struct:ImFontGlyph	typeref:typename:float
+ZERO	arm.hpp	/^            ZERO,$/;"	e	enum:Cpu::Flag
 _CRT_SECURE_NO_WARNINGS	interface/imgui.cpp	/^#define _CRT_SECURE_NO_WARNINGS$/;"	d	file:
 _CRT_SECURE_NO_WARNINGS	interface/imgui_draw.cpp	/^#define _CRT_SECURE_NO_WARNINGS$/;"	d	file:
 _CRT_SECURE_NO_WARNINGS	interface/imgui_widgets.cpp	/^#define _CRT_SECURE_NO_WARNINGS$/;"	d	file:
@@ -3066,6 +3117,7 @@ array_of_unicode_codepoints	interface/imstb_truetype.h	/^   int *array_of_unicod
 b	interface/imgui.h	/^        const char*     b;$/;"	m	struct:ImGuiTextFilter::ImGuiTextRange	typeref:typename:const char *
 back	interface/imgui.h	/^    inline T&           back()                              { IM_ASSERT(Size > 0); return Data[S/;"	f	struct:ImVector	typeref:typename:T &
 back	interface/imgui.h	/^    inline const T&     back() const                        { IM_ASSERT(Size > 0); return Data[S/;"	f	struct:ImVector	typeref:typename:const T &
+bank	bank.hpp	/^        std::array<SizeType, modeCount * virtualSize> bank; $/;"	m	class:Bank	typeref:typename:std::array<SizeType,modeCount * virtualSize>
 baseline_y_delta	interface/imstb_textedit.h	/^   float baseline_y_delta;  \/\/ position of baseline relative to previous row's baseline$/;"	m	struct:__anon0a8ecdc40408	typeref:typename:float
 begin	interface/imgui.h	/^    const char*         begin() const           { return Buf.Data ? &Buf.front() : EmptyString; /;"	f	struct:ImGuiTextBuffer	typeref:typename:const char *
 begin	interface/imgui.h	/^    inline T*           begin()                             { return Data; }$/;"	f	struct:ImVector	typeref:typename:T *
@@ -3073,7 +3125,9 @@ begin	interface/imgui.h	/^    inline const T*     begin() const                 
 begin	interface/imgui_internal.h	/^    T*      begin()                     { size_t HDR_SZ = 4; if (!Buf.Data) return NULL; return /;"	f	struct:ImChunkStream	typeref:typename:T *
 bottom_y	interface/imstb_truetype.h	/^   int x,y,bottom_y;$/;"	m	struct:__anond1ee77bb1108	typeref:typename:int
 bounds	interface/imstb_truetype.h	/^   int bounds;$/;"	m	struct:__anond1ee77bb0f08	typeref:typename:int
+bufferability	arm.hpp	/^        u32 bufferability;$/;"	m	class:CP15	typeref:typename:u32
 c_str	interface/imgui.h	/^    const char*         c_str() const           { return Buf.Data ? Buf.Data : EmptyString; }$/;"	f	struct:ImGuiTextBuffer	typeref:typename:const char *
+cacheType	arm.hpp	/^        u32 cacheType;$/;"	m	class:CP15	typeref:typename:u32
 capacity	interface/imgui.h	/^    inline int          capacity() const                    { return Capacity; }$/;"	f	struct:ImVector	typeref:typename:int
 cff	interface/imstb_truetype.h	/^   stbtt__buf cff;                    \/\/ cff font data$/;"	m	struct:stbtt_fontinfo	typeref:typename:stbtt__buf
 char_storage	interface/imstb_textedit.h	/^   int                        char_storage;$/;"	m	struct:__anon0a8ecdc40108	typeref:typename:int
@@ -3087,6 +3141,8 @@ clear	interface/imgui_internal.h	/^    void    clear()                     { Buf
 col	interface/imgui.h	/^    ImU32   col;$/;"	m	struct:ImDrawVert	typeref:typename:ImU32
 const_iterator	interface/imgui.h	/^    typedef const value_type*   const_iterator;$/;"	t	struct:ImVector	typeref:typename:const value_type *
 contains	interface/imgui.h	/^    inline bool         contains(const T& v) const          { const T* data = Data;  const T* da/;"	f	struct:ImVector	typeref:typename:bool
+control	arm.hpp	/^        u32 control;$/;"	m	class:CP15	typeref:typename:u32
+coprocessors	arm.hpp	/^        std::array<std::unique_ptr<Coprocessor>, 16> coprocessors {};$/;"	m	class:Cpu	typeref:typename:std::array<std::unique_ptr<Coprocessor>,16>
 current_frame	interface/imgui.h	/^    operator bool() const { int current_frame = ImGui::GetFrameCount(); if (RefFrame == current_/;"	m	struct:ImGuiOnceUponAFrame	typeref:typename:int
 cursor	interface/imstb_textedit.h	/^   int cursor;$/;"	m	struct:__anon0a8ecdc40308	typeref:typename:int
 cursor	interface/imstb_truetype.h	/^   int cursor;$/;"	m	struct:__anond1ee77bb0108	typeref:typename:int
@@ -3095,8 +3151,15 @@ cx	interface/imstb_truetype.h	/^      stbtt_vertex_type x,y,cx,cy,cx1,cy1;$/;"	m
 cx1	interface/imstb_truetype.h	/^      stbtt_vertex_type x,y,cx,cy,cx1,cy1;$/;"	m	struct:__anond1ee77bb0708	typeref:typename:stbtt_vertex_type
 cy	interface/imstb_truetype.h	/^      stbtt_vertex_type x,y,cx,cy,cx1,cy1;$/;"	m	struct:__anond1ee77bb0708	typeref:typename:stbtt_vertex_type
 cy1	interface/imstb_truetype.h	/^      stbtt_vertex_type x,y,cx,cy,cx1,cy1;$/;"	m	struct:__anond1ee77bb0708	typeref:typename:stbtt_vertex_type
+data	bank.hpp	/^        std::array<DataType, actualSize> data;$/;"	m	class:Bank	typeref:typename:std::array<DataType,actualSize>
 data	interface/imstb_truetype.h	/^   unsigned char  * data;              \/\/ pointer to .ttf file$/;"	m	struct:stbtt_fontinfo	typeref:typename:unsigned char *
 data	interface/imstb_truetype.h	/^   unsigned char *data;$/;"	m	struct:__anond1ee77bb0108	typeref:typename:unsigned char *
+dataAccessPermission	arm.hpp	/^        u32 dataAccessPermission;$/;"	m	class:CP15	typeref:typename:u32
+dataCachability	arm.hpp	/^        u32 dataCachability;$/;"	m	class:CP15	typeref:typename:u32
+dataLockdown	arm.hpp	/^        u32 dataLockdown;$/;"	m	class:CP15	typeref:typename:u32
+dataProtectionRegions	arm.hpp	/^        std::array<u32, 8> dataProtectionRegions;$/;"	m	class:CP15	typeref:typename:std::array<u32,8>
+dataTcmControl	arm.hpp	/^        u32 dataTcmControl;$/;"	m	class:CP15	typeref:typename:u32
+debug	debug.hpp	/^namespace debug {$/;"	n
 delete_length	interface/imstb_textedit.h	/^   STB_TEXTEDIT_POSITIONTYPE  delete_length;$/;"	m	struct:__anon0a8ecdc40108	typeref:typename:STB_TEXTEDIT_POSITIONTYPE
 direction	interface/imstb_truetype.h	/^   float direction;$/;"	m	struct:stbtt__active_edge	typeref:typename:float
 direction	interface/imstb_truetype.h	/^   int direction;$/;"	m	struct:stbtt__active_edge	typeref:typename:int
@@ -3114,6 +3177,7 @@ equal	interface/imstb_truetype.h	/^static int equal(float *a, float *b)$/;"	f	ty
 erase	interface/imgui.h	/^    inline T*           erase(const T* it)                  { IM_ASSERT(it >= Data && it < Data /;"	f	struct:ImVector	typeref:typename:T *
 erase	interface/imgui.h	/^    inline T*           erase(const T* it, const T* it_last){ IM_ASSERT(it >= Data && it < Data /;"	f	struct:ImVector	typeref:typename:T *
 erase_unsorted	interface/imgui.h	/^    inline T*           erase_unsorted(const T* it)         { IM_ASSERT(it >= Data && it < Data /;"	f	struct:ImVector	typeref:typename:T *
+error	debug.hpp	/^        inline void error() {}$/;"	f	namespace:debug	typeref:typename:void
 extra	interface/imstb_rectpack.h	/^   stbrp_node extra[2]; \/\/ we allocate two extra nodes so optimal user-node-count is 'width' n/;"	m	struct:stbrp_context	typeref:typename:stbrp_node[2]
 ey	interface/imstb_truetype.h	/^   float ey;$/;"	m	struct:stbtt__active_edge	typeref:typename:float
 fdselect	interface/imstb_truetype.h	/^   stbtt__buf fdselect;               \/\/ map from glyph to fontdict$/;"	m	struct:stbtt_fontinfo	typeref:typename:stbtt__buf
@@ -3178,14 +3242,22 @@ hhea	interface/imstb_truetype.h	/^   int loca,head,glyf,hhea,hmtx,kern,gpos; \/\
 hmtx	interface/imstb_truetype.h	/^   int loca,head,glyf,hhea,hmtx,kern,gpos; \/\/ table locations as offset from start of .ttf$/;"	m	struct:stbtt_fontinfo	typeref:typename:int
 id	interface/imstb_rectpack.h	/^   int            id;$/;"	m	struct:stbrp_rect	typeref:typename:int
 id	interface/imstb_truetype.h	/^   int id,w,h,was_packed;$/;"	m	struct:stbrp_rect	typeref:typename:int
+idCode	arm.hpp	/^        u32 idCode;$/;"	m	class:CP15	typeref:typename:u32
 indexToLocFormat	interface/imstb_truetype.h	/^   int indexToLocFormat;              \/\/ format needed to map from glyph index to glyph$/;"	m	struct:stbtt_fontinfo	typeref:typename:int
 index_from_ptr	interface/imgui.h	/^    inline int          index_from_ptr(const T* it) const   { IM_ASSERT(it >= Data && it < Data /;"	f	struct:ImVector	typeref:typename:int
 index_map	interface/imstb_truetype.h	/^   int index_map;                     \/\/ a cmap mapping for our chosen character encoding$/;"	m	struct:stbtt_fontinfo	typeref:typename:int
+info	debug.hpp	/^        inline void info() {}$/;"	f	namespace:debug	typeref:typename:void
 init_mode	interface/imstb_rectpack.h	/^   int init_mode;$/;"	m	struct:stbrp_context	typeref:typename:int
 initialized	interface/imstb_textedit.h	/^   unsigned char initialized;$/;"	m	struct:__anon0a8ecdc40308	typeref:typename:unsigned char
 insert	interface/imgui.h	/^    inline T*           insert(const T* it, const T& v)     { IM_ASSERT(it >= Data && it <= Data/;"	f	struct:ImVector	typeref:typename:T *
 insert_length	interface/imstb_textedit.h	/^   STB_TEXTEDIT_POSITIONTYPE  insert_length;$/;"	m	struct:__anon0a8ecdc40108	typeref:typename:STB_TEXTEDIT_POSITIONTYPE
 insert_mode	interface/imstb_textedit.h	/^   unsigned char insert_mode;$/;"	m	struct:__anon0a8ecdc40308	typeref:typename:unsigned char
+instructionAccessPermission	arm.hpp	/^        u32 instructionAccessPermission;$/;"	m	class:CP15	typeref:typename:u32
+instructionCachability	arm.hpp	/^        u32 instructionCachability;$/;"	m	class:CP15	typeref:typename:u32
+instructionLockdown	arm.hpp	/^        u32 instructionLockdown;$/;"	m	class:CP15	typeref:typename:u32
+instructionProtectionRegions	arm.hpp	/^        std::array<u32, 8> instructionProtectionRegions;$/;"	m	class:CP15	typeref:typename:std::array<u32,8>
+instructionSetFromCore	arm.hpp	/^        static inline InstructionSet instructionSetFromCore($/;"	f	class:Cpu	typeref:typename:InstructionSet
+instructionTcmControl	arm.hpp	/^        u32 instructionTcmControl;$/;"	m	class:CP15	typeref:typename:u32
 invert	interface/imstb_truetype.h	/^   int invert;$/;"	m	struct:stbtt__edge	typeref:typename:int
 is_separator	interface/imgui_widgets.cpp	/^static bool is_separator(unsigned int c)                                        { return ImCharI/;"	f	namespace:ImStb	typeref:typename:bool	file:
 is_word_boundary	interface/imstb_textedit.h	/^static int is_word_boundary( STB_TEXTEDIT_STRING *str, int idx )$/;"	f	typeref:typename:int
@@ -3203,8 +3275,13 @@ main_clipboard	interface/imgui.cpp	/^static PasteboardRef main_clipboard = 0;$/;
 max_size	interface/imgui.h	/^    inline int          max_size() const                    { return 0x7FFFFFFF \/ (int)sizeof(T/;"	f	struct:ImVector	typeref:typename:int
 max_x	interface/imstb_truetype.h	/^   stbtt_int32 min_x, max_x, min_y, max_y;$/;"	m	struct:__anond1ee77bb0f08	typeref:typename:stbtt_int32
 max_y	interface/imstb_truetype.h	/^   stbtt_int32 min_x, max_x, min_y, max_y;$/;"	m	struct:__anond1ee77bb0f08	typeref:typename:stbtt_int32
+mcr	arm.hpp	/^        void mcr($/;"	f	class:CP15	typeref:typename:void
+message	debug.hpp	/^        constexpr char* message {nullptr};$/;"	v	namespace:debug	typeref:typename:char *
 min_x	interface/imstb_truetype.h	/^   stbtt_int32 min_x, max_x, min_y, max_y;$/;"	m	struct:__anond1ee77bb0f08	typeref:typename:stbtt_int32
 min_y	interface/imstb_truetype.h	/^   stbtt_int32 min_x, max_x, min_y, max_y;$/;"	m	struct:__anond1ee77bb0f08	typeref:typename:stbtt_int32
+mode	bank.hpp	/^        SizeType mode; $/;"	m	class:Bank	typeref:typename:SizeType
+modeBitsFromMode	arm.hpp	/^        static inline u8 modeBitsFromMode($/;"	f	class:Cpu	typeref:typename:u8
+modeFromInterrupt	arm.hpp	/^        static inline Mode modeFromInterrupt($/;"	f	class:Cpu	typeref:typename:Mode
 next	interface/imstb_rectpack.h	/^   stbrp_node  *next;$/;"	m	struct:stbrp_node	typeref:typename:stbrp_node *
 next	interface/imstb_truetype.h	/^   struct stbtt__active_edge *next;$/;"	m	struct:stbtt__active_edge	typeref:struct:stbtt__active_edge *
 next	interface/imstb_truetype.h	/^   struct stbtt__hheap_chunk *next;$/;"	m	struct:stbtt__hheap_chunk	typeref:struct:stbtt__hheap_chunk *
@@ -3235,6 +3312,7 @@ operator /=	interface/imgui_internal.h	/^static inline ImVec2& operator\/=(ImVec
 operator =	interface/imgui.h	/^    inline ImVector<T>& operator=(const ImVector<T>& src)   { clear(); resize(src.Size); memcpy(/;"	f	struct:ImVector	typeref:typename:ImVector<T> &
 operator ImU32	interface/imgui.h	/^    inline operator ImU32() const                                   { return ImGui::ColorConvert/;"	f	struct:ImColor
 operator ImVec4	interface/imgui.h	/^    inline operator ImVec4() const                                  { return Value; }$/;"	f	struct:ImColor
+operator []	bank.hpp	/^        DataType& operator[](const SizeType& index) const { $/;"	f	class:Bank	typeref:typename:DataType &
 operator []	interface/imgui.h	/^    inline T&           operator[](int i)                   { IM_ASSERT(i >= 0 && i < Size); ret/;"	f	struct:ImVector	typeref:typename:T &
 operator []	interface/imgui.h	/^    inline char         operator[](int i) const { IM_ASSERT(Buf.Data != NULL); return Buf.Data[i/;"	f	struct:ImGuiTextBuffer	typeref:typename:char
 operator []	interface/imgui.h	/^    inline const T&     operator[](int i) const             { IM_ASSERT(i >= 0 && i < Size); ret/;"	f	struct:ImVector	typeref:typename:const T &
@@ -3255,6 +3333,7 @@ pos	interface/imgui.h	/^    ImVec2  pos;$/;"	m	struct:ImDrawVert	typeref:typenam
 preferred_x	interface/imstb_textedit.h	/^   float preferred_x; \/\/ this determines where the cursor up\/down tries to seek to along x$/;"	m	struct:__anon0a8ecdc40308	typeref:typename:float
 prev_first	interface/imstb_textedit.h	/^   int prev_first;  \/\/ first char of previous row$/;"	m	struct:__anon0a8ecdc40508	typeref:typename:int
 prev_link	interface/imstb_rectpack.h	/^   stbrp_node **prev_link;$/;"	m	struct:__anonba8239e60308	typeref:typename:stbrp_node **
+processId	arm.hpp	/^        u32 processId;$/;"	m	class:CP15	typeref:typename:u32
 proggy_clean_ttf_compressed_data_base85	interface/imgui_draw.cpp	/^static const char proggy_clean_ttf_compressed_data_base85[11980 + 1] =$/;"	v	typeref:typename:const char[]	file:
 ptr_from_offset	interface/imgui_internal.h	/^    T*      ptr_from_offset(int off)    { IM_ASSERT(off >= 4 && off < Buf.Size); return (T*)(voi/;"	f	struct:ImChunkStream	typeref:typename:T *
 push_back	interface/imgui.h	/^    inline void         push_back(const T& v)               { if (Size == Capacity) reserve(_gro/;"	f	struct:ImVector	typeref:typename:void
@@ -3264,6 +3343,7 @@ rect_height_compare	interface/imstb_rectpack.h	/^static int STBRP__CDECL rect_he
 rect_original_order	interface/imstb_rectpack.h	/^static int STBRP__CDECL rect_original_order(const void *a, const void *b)$/;"	f	typeref:typename:int STBRP__CDECL
 redo_char_point	interface/imstb_textedit.h	/^   int undo_char_point, redo_char_point;$/;"	m	struct:__anon0a8ecdc40208	typeref:typename:int
 redo_point	interface/imstb_textedit.h	/^   short undo_point, redo_point;$/;"	m	struct:__anon0a8ecdc40208	typeref:typename:short
+registers	arm.hpp	/^        Bank<u32, u8, 7, 18, 37> registers {};$/;"	m	class:Cpu	typeref:typename:Bank<u32,u8,7,18,37>
 reserve	interface/imgui.h	/^    inline void         reserve(int new_capacity)           { if (new_capacity <= Capacity) retu/;"	f	struct:ImVector	typeref:typename:void
 reserve	interface/imgui.h	/^    void                reserve(int capacity)   { Buf.reserve(capacity); }$/;"	f	struct:ImGuiTextBuffer	typeref:typename:void
 resize	interface/imgui.h	/^    inline void         resize(int new_size)                { if (new_size > Capacity) reserve(_/;"	f	struct:ImVector	typeref:typename:void
@@ -3273,8 +3353,19 @@ resize_grip_def	interface/imgui.cpp	/^static const ImGuiResizeGripDef resize_gri
 row_count_per_page	interface/imstb_textedit.h	/^   int row_count_per_page;$/;"	m	struct:__anon0a8ecdc40308	typeref:typename:int
 s0	interface/imstb_truetype.h	/^   float x0,y0,s0,t0; \/\/ top-left$/;"	m	struct:__anond1ee77bb0308	typeref:typename:float
 s1	interface/imstb_truetype.h	/^   float x1,y1,s1,t1; \/\/ bottom-right$/;"	m	struct:__anond1ee77bb0308	typeref:typename:float
+s16	types.hpp	/^using s16 = std::int16_t;$/;"	t	typeref:typename:std::int16_t
+s16_fast	types.hpp	/^using s16_fast = std::int_fast16_t;$/;"	t	typeref:typename:std::int_fast16_t
+s32	types.hpp	/^using s32 = std::int32_t;$/;"	t	typeref:typename:std::int32_t
+s32_fast	types.hpp	/^using s32_fast = std::int_fast32_t;$/;"	t	typeref:typename:std::int_fast32_t
+s64	types.hpp	/^using s64 = std::int64_t;$/;"	t	typeref:typename:std::int64_t
+s64_fast	types.hpp	/^using s64_fast = std::int_fast64_t;$/;"	t	typeref:typename:std::int_fast64_t
+s8	types.hpp	/^using s8 =  std::int8_t;$/;"	t	typeref:typename:std::int8_t
+s8_fast	types.hpp	/^using s8_fast  = std::int_fast8_t;$/;"	t	typeref:typename:std::int_fast8_t
 select_end	interface/imstb_textedit.h	/^   int select_end;$/;"	m	struct:__anon0a8ecdc40308	typeref:typename:int
 select_start	interface/imstb_textedit.h	/^   int select_start;          \/\/ selection start point$/;"	m	struct:__anon0a8ecdc40308	typeref:typename:int
+serviceInterrupt	arm.hpp	/^        void serviceInterrupt(const Interrupt& interrupt) {$/;"	f	class:Cpu	typeref:typename:void
+setBit	bits.hpp	/^inline constexpr void setBit(DataType& data, const bool& value) {$/;"	f	typeref:typename:void
+setBits	bits.hpp	/^inline constexpr void setBits($/;"	f	typeref:typename:void
 shrink	interface/imgui.h	/^    inline void         shrink(int new_size)                { IM_ASSERT(new_size <= Size); Size /;"	f	struct:ImVector	typeref:typename:void
 single_line	interface/imstb_textedit.h	/^   unsigned char single_line;$/;"	m	struct:__anon0a8ecdc40308	typeref:typename:unsigned char
 size	interface/imgui.h	/^    inline int          size() const                        { return Size; }$/;"	f	struct:ImVector	typeref:typename:int
@@ -3515,6 +3606,7 @@ swap	interface/imgui.h	/^    inline void         swap(ImVector<T>& rhs)         
 sy	interface/imstb_truetype.h	/^   float sy;$/;"	m	struct:stbtt__active_edge	typeref:typename:float
 t0	interface/imstb_truetype.h	/^   float x0,y0,s0,t0; \/\/ top-left$/;"	m	struct:__anond1ee77bb0308	typeref:typename:float
 t1	interface/imstb_truetype.h	/^   float x1,y1,s1,t1; \/\/ bottom-right$/;"	m	struct:__anond1ee77bb0308	typeref:typename:float
+tcmSize	arm.hpp	/^        u32 tcmSize;$/;"	m	class:CP15	typeref:typename:u32
 ttBYTE	interface/imstb_truetype.h	/^#define ttBYTE(/;"	d
 ttCHAR	interface/imstb_truetype.h	/^#define ttCHAR(/;"	d
 ttFixed	interface/imstb_truetype.h	/^#define ttFixed(/;"	d
@@ -3523,6 +3615,14 @@ ttSHORT	interface/imstb_truetype.h	/^static stbtt_int16 ttSHORT(stbtt_uint8 *p) 
 ttULONG	interface/imstb_truetype.h	/^static stbtt_uint32 ttULONG(stbtt_uint8 *p)  { return (p[0]<<24) + (p[1]<<16) + (p[2]<<8) + p[3]/;"	f	typeref:typename:stbtt_uint32
 ttUSHORT	interface/imstb_truetype.h	/^static stbtt_uint16 ttUSHORT(stbtt_uint8 *p) { return p[0]*256 + p[1]; }$/;"	f	typeref:typename:stbtt_uint16
 type	interface/imstb_truetype.h	/^      unsigned char type,padding;$/;"	m	struct:__anond1ee77bb0708	typeref:typename:unsigned char
+u16	types.hpp	/^using u16 = std::uint16_t;$/;"	t	typeref:typename:std::uint16_t
+u16_fast	types.hpp	/^using u16_fast = std::uint_fast16_t;$/;"	t	typeref:typename:std::uint_fast16_t
+u32	types.hpp	/^using u32 = std::uint32_t;$/;"	t	typeref:typename:std::uint32_t
+u32_fast	types.hpp	/^using u32_fast = std::uint_fast32_t;$/;"	t	typeref:typename:std::uint_fast32_t
+u64	types.hpp	/^using u64 = std::uint64_t;$/;"	t	typeref:typename:std::uint64_t
+u64_fast	types.hpp	/^using u64_fast = std::uint_fast64_t;$/;"	t	typeref:typename:std::uint_fast64_t
+u8	types.hpp	/^using u8 =  std::uint8_t;$/;"	t	typeref:typename:std::uint8_t
+u8_fast	types.hpp	/^using u8_fast  = std::uint_fast8_t;$/;"	t	typeref:typename:std::uint_fast8_t
 undo_char	interface/imstb_textedit.h	/^   STB_TEXTEDIT_CHARTYPE  undo_char[STB_TEXTEDIT_UNDOCHARCOUNT];$/;"	m	struct:__anon0a8ecdc40208	typeref:typename:STB_TEXTEDIT_CHARTYPE[]
 undo_char_point	interface/imstb_textedit.h	/^   int undo_char_point, redo_char_point;$/;"	m	struct:__anon0a8ecdc40208	typeref:typename:int
 undo_point	interface/imstb_textedit.h	/^   short undo_point, redo_point;$/;"	m	struct:__anon0a8ecdc40208	typeref:typename:short
@@ -3543,12 +3643,14 @@ w	interface/imgui.h	/^    float                                   x, y, z, w;$/;
 w	interface/imstb_rectpack.h	/^   stbrp_coord    w, h;$/;"	m	struct:stbrp_rect	typeref:typename:stbrp_coord
 w	interface/imstb_truetype.h	/^   int id,w,h,was_packed;$/;"	m	struct:stbrp_rect	typeref:typename:int
 w	interface/imstb_truetype.h	/^   int w,h,stride;$/;"	m	struct:__anond1ee77bb0808	typeref:typename:int
+warn	debug.hpp	/^        inline void warn() {}$/;"	f	namespace:debug	typeref:typename:void
 was_packed	interface/imstb_rectpack.h	/^   int            was_packed;  \/\/ non-zero if valid packing$/;"	m	struct:stbrp_rect	typeref:typename:int
 was_packed	interface/imstb_truetype.h	/^   int id,w,h,was_packed;$/;"	m	struct:stbrp_rect	typeref:typename:int
 where	interface/imstb_textedit.h	/^   STB_TEXTEDIT_POSITIONTYPE  where;$/;"	m	struct:__anon0a8ecdc40108	typeref:typename:STB_TEXTEDIT_POSITIONTYPE
 width	interface/imstb_rectpack.h	/^   int width;$/;"	m	struct:stbrp_context	typeref:typename:int
 width	interface/imstb_truetype.h	/^   int   width;$/;"	m	struct:stbtt_pack_context	typeref:typename:int
 width	interface/imstb_truetype.h	/^   int width,height;$/;"	m	struct:__anond1ee77bb1108	typeref:typename:int
+write	debug.hpp	/^        inline int write(char* buffer, const char* fmt, ...) {$/;"	f	namespace:debug	typeref:typename:int
 x	interface/imgui.h	/^    float                                   x, y, z, w;$/;"	m	struct:ImVec4	typeref:typename:float
 x	interface/imgui.h	/^    float                                   x, y;$/;"	m	struct:ImVec2	typeref:typename:float
 x	interface/imgui_internal.h	/^    float   x;$/;"	m	struct:ImVec1	typeref:typename:float

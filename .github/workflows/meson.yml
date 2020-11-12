@@ -8,9 +8,6 @@ on:
     branches:
       - master
 
-env:
-  BUILD_TYPE: Release
-
 jobs:
   ubuntu:
     runs-on: ubuntu-latest
@@ -28,7 +25,7 @@ jobs:
           tar -xf sdk.tar.gz
           source ${SDK_VERSION}/setup-env.sh
           cd $GITHUB_WORKSPACE
-          CXX=g++-10 meson setup build --prefix="/" --bindir=bin
+          CXX=g++-10 meson setup build --prefix="/" --bindir=bin -Dbuildtype=release
           meson compile -C build
           cd build
           meson test
@@ -56,7 +53,7 @@ jobs:
           sudo ./install_vulkan.py
           cd $GITHUB_WORKSPACE
           hdiutil detach ${{runner.workspace}}/sdk
-          meson setup build --prefix="/" --bindir=bin
+          meson setup build --prefix="/" --bindir=bin -Dbuildtype=release
           meson compile -C build
           cd build
           meson test
@@ -78,7 +75,7 @@ jobs:
           choco install vulkan-sdk
           choco uninstall strawberryperl
       - name: Build
-        run: C:\msys64\usr\bin\bash -c 'export PATH=/c/msys64/mingw64/bin:${PATH} && echo $PATH && export SDK_VERSION=$(curl https://vulkan.lunarg.com/sdk/latest/windows.txt) && export VULKAN_SDK=/c/VulkanSDK/${SDK_VERSION} && cd /d/a/hypNITRO/hypNITRO && meson setup build --prefix="/" --bindir=bin && meson compile -C build && cd build && meson test && DESTDIR=/d/a/hypNITRO/install meson install' 
+        run: C:\msys64\usr\bin\bash -c 'export PATH=/c/msys64/mingw64/bin:${PATH} && echo $PATH && export SDK_VERSION=$(curl https://vulkan.lunarg.com/sdk/latest/windows.txt) && export VULKAN_SDK=/c/VulkanSDK/${SDK_VERSION} && cd /d/a/hypNITRO/hypNITRO && meson setup build --prefix="/" --bindir=bin -Dbuildtype=release && meson compile -C build && cd build && meson test && DESTDIR=/d/a/hypNITRO/install meson install' 
       - name: Upload Artifact
         uses: actions/upload-artifact@v2
         with:
