@@ -3127,7 +3127,6 @@ bottom_y	interface/imstb_truetype.h	/^   int x,y,bottom_y;$/;"	m	struct:__anond1
 bounds	interface/imstb_truetype.h	/^   int bounds;$/;"	m	struct:__anond1ee77bb0f08	typeref:typename:int
 bufferability	arm.hpp	/^        u32 bufferability;$/;"	m	class:CP15	typeref:typename:u32
 c_str	interface/imgui.h	/^    const char*         c_str() const           { return Buf.Data ? Buf.Data : EmptyString; }$/;"	f	struct:ImGuiTextBuffer	typeref:typename:const char *
-cacheType	arm.hpp	/^        u32 cacheType;$/;"	m	class:CP15	typeref:typename:u32
 capacity	interface/imgui.h	/^    inline int          capacity() const                    { return Capacity; }$/;"	f	struct:ImVector	typeref:typename:int
 cff	interface/imstb_truetype.h	/^   stbtt__buf cff;                    \/\/ cff font data$/;"	m	struct:stbtt_fontinfo	typeref:typename:stbtt__buf
 char_storage	interface/imstb_textedit.h	/^   int                        char_storage;$/;"	m	struct:__anon0a8ecdc40108	typeref:typename:int
@@ -3242,7 +3241,6 @@ hhea	interface/imstb_truetype.h	/^   int loca,head,glyf,hhea,hmtx,kern,gpos; \/\
 hmtx	interface/imstb_truetype.h	/^   int loca,head,glyf,hhea,hmtx,kern,gpos; \/\/ table locations as offset from start of .ttf$/;"	m	struct:stbtt_fontinfo	typeref:typename:int
 id	interface/imstb_rectpack.h	/^   int            id;$/;"	m	struct:stbrp_rect	typeref:typename:int
 id	interface/imstb_truetype.h	/^   int id,w,h,was_packed;$/;"	m	struct:stbrp_rect	typeref:typename:int
-idCode	arm.hpp	/^        u32 idCode;$/;"	m	class:CP15	typeref:typename:u32
 indexToLocFormat	interface/imstb_truetype.h	/^   int indexToLocFormat;              \/\/ format needed to map from glyph index to glyph$/;"	m	struct:stbtt_fontinfo	typeref:typename:int
 index_from_ptr	interface/imgui.h	/^    inline int          index_from_ptr(const T* it) const   { IM_ASSERT(it >= Data && it < Data /;"	f	struct:ImVector	typeref:typename:int
 index_map	interface/imstb_truetype.h	/^   int index_map;                     \/\/ a cmap mapping for our chosen character encoding$/;"	m	struct:stbtt_fontinfo	typeref:typename:int
@@ -3606,7 +3604,6 @@ swap	interface/imgui.h	/^    inline void         swap(ImVector<T>& rhs)         
 sy	interface/imstb_truetype.h	/^   float sy;$/;"	m	struct:stbtt__active_edge	typeref:typename:float
 t0	interface/imstb_truetype.h	/^   float x0,y0,s0,t0; \/\/ top-left$/;"	m	struct:__anond1ee77bb0308	typeref:typename:float
 t1	interface/imstb_truetype.h	/^   float x1,y1,s1,t1; \/\/ bottom-right$/;"	m	struct:__anond1ee77bb0308	typeref:typename:float
-tcmSize	arm.hpp	/^        u32 tcmSize;$/;"	m	class:CP15	typeref:typename:u32
 ttBYTE	interface/imstb_truetype.h	/^#define ttBYTE(/;"	d
 ttCHAR	interface/imstb_truetype.h	/^#define ttCHAR(/;"	d
 ttFixed	interface/imstb_truetype.h	/^#define ttFixed(/;"	d

@@ -24,15 +24,17 @@ enum class Width : u8 {
 };
 
 class Coprocessor {};
+//TODO: check CP15 template parameter validity
+template <
+        u32 idCode, 
+        u32 cacheType, 
+        u32 tcmSize>
 class CP15 : public Coprocessor {
     protected:
 
     public:
         /* Registers: */
         /*            */
-        u32 idCode;
-        u32 cacheType;
-        u32 tcmSize;
         u32 control;
         u32 dataCachability;
         u32 instructionCachability;
